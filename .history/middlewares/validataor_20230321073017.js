@@ -1,0 +1,1 @@
+const validatorMiddlware = (req, res, nex)

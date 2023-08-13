@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../.history"
+		},
+		{
+			"path": "../config"
+		},
+		{
+			"path": "../middlewares"
+		},
+		{
+			"path": "../modlas"
+		},
+		{
+			"path": "../node_modules"
+		},
+		{
+			"path": "../routes"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../uploads"
+		},
+		{
+			"path": "../utilis"
+		}
+	]
+}

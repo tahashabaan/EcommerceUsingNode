@@ -1,0 +1,1 @@
+const slugfiy = require('slugfiy');
