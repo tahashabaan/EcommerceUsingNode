@@ -83,7 +83,7 @@ app.use('/api/v1/address', addressRoute);
 // 07-Shoping
 app.use('/api/v1/shopingCart', shopingCartRoute);
 
-app.use('/webhook',express.raw({type: 'application/json'}), webhookCheckout )
+app.use('/webhooks', webhookCheckout )
 // global handling middlawera
 app.all('*', (req, res, next) => {
     next(new ApiError(`not can find route: ${req.originalUrl}`, 400));

@@ -21,7 +21,7 @@ const addressRoute = require('./routes/addressRoute')
 const shopingCartRoute = require('./routes/shopingCartRoute')
 const ApiError = require('./utilis/apiError');
 const globalMiddleware = require('./middlewares/errorMiddleware');
-const {webhookCheckout} = require('./services/orderService');
+const {createCardOrder} = require('./services/orderService');
 
 // appExpress
 const app =express();
@@ -83,7 +83,7 @@ app.use('/api/v1/address', addressRoute);
 // 07-Shoping
 app.use('/api/v1/shopingCart', shopingCartRoute);
 
-app.use('/webhook',express.raw({type: 'application/json'}), webhookCheckout )
+app.use('/webhooks', webhookCheckout )
 // global handling middlawera
 app.all('*', (req, res, next) => {
     next(new ApiError(`not can find route: ${req.originalUrl}`, 400));
