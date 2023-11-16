@@ -49,6 +49,11 @@ sharp
 slugify
 swagger-
 ui-express
+eslint
+prettier
 ```
+## how use it
+after install dependencies using command ``` npm install```your can used it path ```api/docs``` to show api document it project 
 
+ 
 
