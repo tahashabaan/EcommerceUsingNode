@@ -29,12 +29,26 @@ in this, it can add and update or delete a order
 in it also can add payment methode using stripe to payment using card 
 and your can payment using cash order
 
+## Installation => npm install
+```bcryptjs
+body-parser
+colors
+compression
+cors
+dotenv
+express
+express-async-handler
+express-validator
+jsonwebtoken
+mongoose
+morgan
+multer
+nodemailer
+nodemon
+sharp
+slugify
+swagger-
+ui-express
+```
 
 
-
-
-
-
-
-#### video:
-[![], ( )](https://www.youtube.com/watch?v=evz1LqEomTE) - how use readME
