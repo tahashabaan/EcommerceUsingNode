@@ -1,5 +1,0 @@
-
-const subcatagorySchema =  new Schema({
-
-});
-

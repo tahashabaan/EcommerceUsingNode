@@ -1,6 +1,0 @@
-
-class apiFeature{
-   constructor(queryObjec){
-
-   } 
-}

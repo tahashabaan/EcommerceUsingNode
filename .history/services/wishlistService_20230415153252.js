@@ -1,1 +1,0 @@
-const product  = require('../modlas/produc')

@@ -6,8 +6,9 @@ const dotenv = require('dotenv');
 const bodyParser=require('body-parser');
 const cors=require('cors');
 const compression=require('compression');
+const swaggerUI = require('swagger-ui-express');
 
-
+const docSwagger = require('./docs/swagger.json');
 const dbConnection = require('./config/database');
 const categoryRoute = require('./routes/categoryRoute');
 const subcatagoryRoute = require('./routes/subCatagoryRoute');
@@ -44,7 +45,8 @@ if (process.env.NODE_ENV ==='development' ) {
 }
 
 // connection database
-
+// home
+app.use('/api/docs',swaggerUI.serve, swaggerUI.setup(docSwagger))
 // routes
 // 01-categories
 app.use('/api/v1/categories', categoryRoute);
@@ -92,19 +94,16 @@ app.all('*', (req, res, next) => {
 // fetch to error handle error
 app.use(globalMiddleware);
 
-dbConnection();
 //listing app
 const PORT = process.env.PORT || 8000;
 const server =  app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)
+    dbConnection();
 })
 
-// catch error
-// console.log(process.argv);
-// console.log(process.env);
 
-process.on("unhandledRejection", (err) => {
-    
+// // handle unhandled rejection
+process.on('unhandledRejection', (err) => {
     console.log(`unhandled rejection Error ${err.name} ${err.message}`);
     server.close(() => {
         console.log('shuting down.......')

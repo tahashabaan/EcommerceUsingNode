@@ -82,6 +82,7 @@ productSchema.virtual('reviews', {
   foreignField: 'product'
 })
 
+// populate by name using name
 const populate = (path, select) => {
   productSchema.pre(/^find/, function (next) {
     this.populate({

@@ -14,7 +14,7 @@ const {
     deleteProductByID,
     uploadProductImages,
     filterProductImages,
-    addWishList  }=require('../services/productService');
+      }=require('../services/productService');
 
     const authService = require('../services/authService')
     const reviewRoute = require('./reviewRoute')

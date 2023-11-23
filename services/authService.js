@@ -75,13 +75,15 @@ exports.protect = asyncHandler(async(req, res, next) => {
   next();
 })
 
+
+// recive roles then check it
 exports.allowTo = (...roles) =>
    asyncHandler(async(req, res, next) => {
      if (!roles.includes(req.user.role))
         return next(new ApiError('You are not allowed to access this route', 402));
 
-       next()
-  })
+       next();
+})
 
 
 exports.forgetPassword = asyncHandler(async (req, res, next) => {

@@ -1,2 +1,0 @@
-
-const subcatagorySchema =  new Schema({}

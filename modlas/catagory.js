@@ -31,6 +31,7 @@ catagorySchema.post('init', (doc) => {
 catagorySchema.post('save', (doc) => {
     setIamgeUrl(doc)
 })
+
 const catagoryModal = mongoose.model('catagory', catagorySchema);
 
 module.exports = catagoryModal;
