@@ -1,5 +1,5 @@
 # ecommerce-wep-app
-   do api to ecommerce wep app  i used node js and mongodb to store database
+   Ecommerce wep API  i using node js to control services and routes and mongodb to store database
 
 ## Features
 ### 1- Product Management: 
