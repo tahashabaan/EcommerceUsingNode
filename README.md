@@ -15,7 +15,7 @@
    - Allow users to create accounts and log in securely.
    - Display past orders and order details for logged-in users.
 
-##  How to Install the Project
+##  How to Install and Run the Project
   to install it project using it command `npm install` to install all dependencies.
     - ```bcryptjs
        body
@@ -38,5 +38,26 @@
        supertest
       swagger-
       ui-express```
+- to run you need configuration file called `config.env` includes 
+ ```PORT
+ NODE_ENV
+ BASE_URL_ENV
+ SECRET_JWT_CODE
+ DB_USER
+ DB_PASSWORD
+ DB_URI
+JWT_SECRET_KEY
+JWT_EXPIRE_TIME
+HOST
+PORT_GMAIL
+SERVICE
+USER
+PASS
+STRIPE_WEBHOOK_SECRET
+```
+## How to Use the Project
+  you can run ptoject using it command `npm run dev` and  you can show Api docs  using  it route `/api/docs`
+
+
 
   
